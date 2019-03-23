@@ -1,0 +1,25 @@
+{
+  "name": "web3-plugins",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/web3-plugins/web3-plugins.git"
+  },
+  "keywords": [
+    "web3",
+    "plugins",
+    "ethereum"
+  ],
+  "contributors": [
+    "Ron Gierlach (https://youfoundron.com)"
+  ],
+  "license": "GPL-3.0-or-later",
+  "bugs": {
+    "url": "https://github.com/web3-plugins/web3-plugins/issues"
+  },
+  "homepage": "https://github.com/web3-plugins/web3-plugins#readme"
+}
