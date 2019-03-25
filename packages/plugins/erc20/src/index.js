@@ -10,8 +10,8 @@ export default {
 
     const contractMethodEndpoints = abi
       .filter(interfaceDefinition => interfaceDefinition.type === 'function')
-      .reduce((endpoints, functionInterface) => {
-        const methodName = functionInterface.name
+      .reduce((endpoints, functionDefinition) => {
+        const methodName = functionDefinition.name
         endpoints[methodName] = withContract((c, ...params) =>
           c.methods[methodName](...params))
 
