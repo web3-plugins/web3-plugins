@@ -6,6 +6,9 @@
   "module": "dist/index.esm.js",
   "browser": "dist/index.umd.js",
   "scripts": {
+    "build": "rollup -c",
+    "dev": "rollup -c -w",
+    "pretest": "npm run build",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "license": "GPL-3.0-or-later",
@@ -14,5 +17,16 @@
   },
   "dependencies": {
     "lodash.set": "^4.3.2"
-  }
+  },
+  "devDependencies": {
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "rollup": "^1.7.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.2",
+    "rollup-plugin-node-resolve": "^4.0.1"
+  },
+  "files": [
+    "dist"
+  ]
 }
