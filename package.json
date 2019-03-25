@@ -24,6 +24,18 @@
   },
   "homepage": "https://github.com/web3-plugins/web3-plugins#readme",
   "devDependencies": {
-    "lerna": "^3.13.1"
+    "@babel/core": "^7.4.0",
+    "@babel/preset-env": "^7.4.2",
+    "lerna": "^3.13.1",
+    "rollup": "^1.7.3",
+    "rollup-plugin-babel": "^4.3.2",
+    "rollup-plugin-commonjs": "^9.2.2",
+    "rollup-plugin-node-resolve": "^4.0.1"
+  },
+  "dependencies": {
+    "@web3-plugins/core": "file:packages/core",
+    "@web3-plugins/erc1404": "file:packages/plugins/erc1404",
+    "@web3-plugins/erc20": "file:packages/plugins/erc20",
+    "@web3-plugins/gnosis-multisig": "file:packages/plugins/gnosis-multisig"
   }
 }
