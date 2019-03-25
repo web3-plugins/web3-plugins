@@ -1,3 +1,5 @@
+import set from 'lodash.set'
+
 const validatePlugin = plugin => {
   if (
     typeof plugin !== 'object' ||
@@ -25,7 +27,7 @@ function withPlugins (Web3, pluginsArray) {
         // at the specified path
         for (let path in endpoints) {
           const endpoint = endpoints[path]
-          _.set(this, path, endpoint)
+          set(this, path, endpoint)
         }
       }
     }
