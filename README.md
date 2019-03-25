@@ -12,7 +12,7 @@ import erc20Plugin from '@web3-plugins/erc20'
 // or author your own custom plugins
 const toDisplayValuePlugin = {
   addEndpoints: web3 => ({
-    'utils.toDisplayValue': (value, decimals) => {
+    'utils.toDisplayValue': (value, decimals = 18) => {
       const ten = new web3.utils.BN(10)
       const baseUnit = ten.exponentiatedBy(decimals)
       const baseValue = new web3.utils.BN(value)
@@ -37,6 +37,6 @@ const doStuff = async () => {
   const walletBalance = await web3.erc20.balanceOf(tokenAddress, walletAddress)
   
   // using the toDisplayValue endpoint
-  const walletDisplayBalance = web3.utils.toDisplayValue(walletBalance)
+  const walletDisplayBalance = web3.utils.toDisplayValue(walletBalance, decimals)
 }
 ```
