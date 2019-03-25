@@ -1,4 +1,4 @@
-import abi from './abi'
+const abi = require('./abi.json')
 
 const contractFactoryFromABI = abi => (...args) => new web3.eth.Contract(abi, ...args)
 const withContractFactory = contractFactory => fn => (deployedAddr, ...args) => fn(contractFactory(deployedAddr), ...args)
@@ -9,7 +9,7 @@ export default {
     const withContract = withContractFactory(contractFactory)
 
     const contractMethodEndpoints = abi
-      .filter(interface => interface.type === 'function')
+      .filter(interfaceDefinition => interfaceDefinition.type === 'function')
       .reduce((endpoints, functionInterface) => {
         const methodName = functionInterface.name
         endpoints[methodName] = withContract((c, ...params) =>
