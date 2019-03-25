@@ -33,8 +33,8 @@ const doStuff = async () => {
   const walletAddress = '0xB3764761E297D6f121e79C32A65829Cd1dDb4D32'
 
   // using the erc20 plugin endpoints
-  const decimals = await web3.erc20.decimals(tokenAddress)
-  const walletBalance = await web3.erc20.balanceOf(tokenAddress, walletAddress)
+  const decimals = await web3.erc20.decimals(tokenAddress).call()
+  const walletBalance = await web3.erc20.balanceOf(tokenAddress, walletAddress).call()
   
   // using the toDisplayValue endpoint
   const walletDisplayBalance = web3.utils.toDisplayValue(walletBalance, decimals)
