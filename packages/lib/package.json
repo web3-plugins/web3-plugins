@@ -1,5 +1,5 @@
 {
-  "name": "@web3-plugins/gnosis-multisig",
+  "name": "@web3-plugins/lib",
   "version": "1.0.0",
   "description": "",
   "main": "dist/index.cjs.js",
@@ -17,5 +17,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "lodash.set": "^4.3.2"
+  }
 }

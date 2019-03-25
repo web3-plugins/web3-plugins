@@ -17,5 +17,8 @@
   },
   "files": [
     "dist"
-  ]
+  ],
+  "dependencies": {
+    "lodash.flow": "^3.5.0"
+  }
 }

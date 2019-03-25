@@ -36,6 +36,7 @@
     "@web3-plugins/core": "file:packages/core",
     "@web3-plugins/erc1404": "file:packages/plugins/erc1404",
     "@web3-plugins/erc20": "file:packages/plugins/erc20",
-    "@web3-plugins/gnosis-multisig": "file:packages/plugins/gnosis-multisig"
+    "@web3-plugins/gnosis-multisig": "file:packages/plugins/gnosis-multisig",
+    "@web3-plugins/lib": "file:packages/lib"
   }
 }
