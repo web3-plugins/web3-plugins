@@ -33,12 +33,12 @@ const doStuff = async () => {
   const tokenAddress = '0xBB9bc244D798123fDe783fCc1C72d3Bb8C189413'
   const walletAddress = '0xB3764761E297D6f121e79C32A65829Cd1dDb4D32'
 
-  // using the erc20 plugin endpoints
+  // using the new erc20 endpoints
   const tokenContract = new web3.erc20.contract(tokenAddress)
   const tokenDecimals = await tokenContract.methods.decimals().call()
   const walletBalance = await tokenContract.methods.balanceOf(walletAddress).call()
   
-  // using the toDisplayValue endpoint
+  // using the new toDisplayValue endpoint
   const walletDisplayBalance = web3.utils.toDisplayValue(walletBalance, tokenDecimals)
 }
 ```
